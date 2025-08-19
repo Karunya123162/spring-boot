@@ -1,13 +1,9 @@
-name: Build and Deploy Spring Boot App
+name: Build and Run Spring Boot App
 
 on:
   push:
     branches:
       - main
-
-permissions:
-  contents: read
-  security-events: write  # Required for dependency submission
 
 jobs:
   build:
@@ -24,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean install -DskipTests
+        run: mvn clean package -DskipTests
 
-      - name: Submit dependency graph to GitHub
-        uses: advanced-security/maven-dependency-submission-action@v4
+      - name: Run Spring Boot App
+        run: java -jar target/*.jar
