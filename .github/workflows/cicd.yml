@@ -18,5 +18,4 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-      - name: Run App
-        run: java -jar target/github-actions-zero-to-hero1-1.0.0.jar
+      
