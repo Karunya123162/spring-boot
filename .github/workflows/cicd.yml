@@ -28,9 +28,9 @@ jobs:
         run : mvn -B test --file pom.xml
       - name: build the application
       #writing multiple commands
-        run: |
-          mvn clean 
-          mvn -B package --file pom.xml
-      #update dependency graph
-      - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@v4
+        # run: |
+        #   mvn clean 
+        #   mvn -B package --file pom.xml
+      # #update dependency graph
+      # - name: Update dependency graph
+      #   uses: advanced-security/maven-dependency-submission-action@v4
