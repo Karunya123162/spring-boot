@@ -18,4 +18,5 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-      
+      - name: run App
+        run : 
